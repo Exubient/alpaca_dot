@@ -20,4 +20,10 @@ from root.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', root, name="root"),
+    url(r'^matching/$', matching, name="matching"),
+    url(r'^profile/$', profile, name="profile"),
+    url(r'^about/$', about, name="about"),
+    url(r'^login/$', login, name="login"),
+    url(r'^signUp/$', signUp, name="signUp"),
+
 ]
