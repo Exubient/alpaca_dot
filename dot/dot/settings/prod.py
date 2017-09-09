@@ -6,11 +6,11 @@ ALLOWED_HOSTS = ["*"]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'realmonkey.mysql.database.azure.com',
-        "PORT": 3306,
-        "USER": "monkeyadmin@realmonkey",
-        "PASSWORD": load_credential('DB_PASSWORD'),
-        "NAME": "monkeydb",
+        'ENGINE': "django.db.backends.postgresql_psycopg2",
+        'HOST': "dot-master.cy0xy47wyrc6.ap-northeast-2.rds.amazonaws.com",
+        "PORT": "5432",
+        "USER": "master",
+        "PASSWORD": load_credential("DB_PASSWORD"),
+        "NAME": "dot_production",
     }
 }
