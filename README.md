@@ -18,3 +18,7 @@ AUSG Alpaca Dot proejct
 
 ## Data Modeling
 ![스크린샷, 2017-09-05 22-54-58](https://i.imgur.com/EW9fQ1Q.png)
+
+
+## Git Book
+[깃북](https://www.gitbook.com/book/lcgkiller/dot-project/edit#/edit/master/README.md?_k=ich9rp)
