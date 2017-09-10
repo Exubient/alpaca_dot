@@ -22,7 +22,7 @@ print("############### BASE_DIR : ", BASE_DIR)
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 print("############### TEMPLATE_DIR : ", TEMPLATE_DIR)
 
-
+DEBUG=True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
