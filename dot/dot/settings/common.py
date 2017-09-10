@@ -18,8 +18,11 @@ from .loader import load_credential
 #여겨도...;;ㅠ
 BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+print("############### BASE_DIR : ", BASE_DIR)
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+print("############### TEMPLATE_DIR : ", TEMPLATE_DIR)
 
+DEBUG=True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -59,7 +62,9 @@ ROOT_URLCONF = 'dot.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            TEMPLATE_DIR,
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
