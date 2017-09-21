@@ -17,5 +17,5 @@ def login(request):
 	return render(request, 'root/src/account/contact.html', {})
 
 def signUp(request):
-	return render(request, 'root/src/account/contact.html', {})
+	return render(request, 'root/src/account/signUp.html', {})
 

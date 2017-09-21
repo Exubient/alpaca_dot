@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
 
     # Local apps
-    'root', 
+    'root',
+    'django_s3_storage',
 ]
 
 MIDDLEWARE = [
