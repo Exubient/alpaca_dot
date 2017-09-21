@@ -14,20 +14,26 @@ class Member(models.Model):
     phone = models.IntegerField()
     email = models.EmailField()
     m_type = models.CharField(max_length=1, choices = TYPE_CHOICES)
-    Post_set = models.ManyToManyField('Post')
-    matching_set = models.ManyToManyField('Matching')
+    matching_set = models.ManyToManyField('Matching',blank=True)
+
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
-    org = models.ForeignKey(Member,unique=True)
+    author = models.ForeignKey(Member, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
+    def __str__(self):
+        return self.title
+
+    
 
 class Matching(models.Model):
-    vol = models.ForeignKey(Member,related_name='Machng_vol')
-    org = models.ForeignKey(Post, to_field="org_id", related_name='Maching_org') # 이렇게 하는게 맞나싶음..
-    post = models.ForeignKey(Post,) # 어떤 포스트에대해서 무슨관계인지 알기위해선 추가하는게 좋을듯
+    volunteer = models.ForeignKey(Member,related_name='matching_vol')
+    organization = models.ForeignKey(Post, related_name='matching_org')  
+    post = models.ForeignKey(Post) # 어떤 포스트에대해서 무슨관계인지 알기위해선 추가하는게 좋을듯
     state = models.CharField(max_length=20)
 
 
